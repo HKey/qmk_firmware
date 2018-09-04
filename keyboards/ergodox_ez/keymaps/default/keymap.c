@@ -8,6 +8,14 @@
 #define SYMB 1 // symbol
 #define ARRW 2 // arrow
 
+// key aliases
+#define JP_HAT  KC_EQL  // ^ and ~
+#define JP_AT   KC_LBRC // @ and `
+#define JP_LBRC KC_RBRC // [ and {
+#define JP_COLN KC_QUOT // : and *
+#define JP_RBRC KC_BSLS // ] and }
+#define JP_RO   KC_RO   // \ and _
+
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
   EPRM,
@@ -59,10 +67,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                          MO(SYMB), MO(ARRW), KC_NO,
         // right hand
              KC_PSCR,     KC_6,   KC_7,    KC_8,   KC_9,   KC_0,             KC_MINS,
-             KC_BSPC,     KC_Y,   KC_U,    KC_I,   KC_O,   KC_P,             KC_LBRC,
-                          KC_H,   KC_J,    KC_K,   KC_L,   KC_SCLN,          KC_COLN,
-             KC_DEL,      KC_N,   KC_M,    KC_COMM,KC_DOT, KC_SLSH,          KC_BSLS,
-                                  KC_HENK, KC_CIRC,KC_JYEN,KC_AT,            KC_RBRC,
+             KC_BSPC,     KC_Y,   KC_U,    KC_I,   KC_O,   KC_P,             JP_LBRC,
+                          KC_H,   KC_J,    KC_K,   KC_L,   KC_SCLN,          JP_COLN,
+             KC_DEL,      KC_N,   KC_M,    KC_COMM,KC_DOT, KC_SLSH,          JP_RO,
+                                  KC_HENK, JP_HAT ,KC_JYEN,JP_AT,            JP_RBRC,
              KC_VOLD, KC_VOLU,
              KC_NO,
              MO(ARRW),MO(SYMB), KC_ENT
@@ -91,20 +99,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // SYMBOLS
 [SYMB] = LAYOUT_ergodox(
        // left hand
-       VRSN,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
-       KC_TRNS,KC_EXLM,KC_AT,  KC_LCBR,KC_RCBR,KC_PIPE,KC_TRNS,
-       KC_TRNS,KC_HASH,KC_DLR, KC_LPRN,KC_RPRN,KC_GRV,
-       KC_TRNS,KC_PERC,KC_CIRC,KC_LBRC,KC_RBRC,KC_TILD,KC_TRNS,
-          EPRM,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+       VRSN,   KC_F1,  KC_F2,  KC_F3,     KC_F4,    KC_F5,  KC_TRNS,
+       KC_TRNS,KC_EXLM,KC_AT,  S(KC_MINS),S(JP_HAT),KC_PIPE,KC_TRNS,
+       KC_TRNS,KC_HASH,KC_DLR, KC_LPRN,   KC_RPRN,  KC_GRV,
+       KC_TRNS,KC_PERC,KC_CIRC,KC_MINS,   JP_HAT,   KC_TILD,KC_TRNS,
+          EPRM,KC_TRNS,KC_TRNS,KC_TRNS,   KC_TRNS,
                                        KC_TRNS,KC_TRNS,
                                                KC_TRNS,
                                KC_TRNS,KC_TRNS,KC_TRNS,
        // right hand
-       KC_TRNS, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
-       KC_TRNS, KC_TRNS, KC_7,   KC_8,    KC_9,    KC_SLSH, KC_F12,
-                KC_TRNS, KC_4,    KC_5,   KC_6,    KC_ASTR, KC_EQL,
-       KC_TRNS, KC_AMPR, KC_1,   KC_2,    KC_3,    KC_MINS, KC_BSLS,
-                         KC_0,   KC_TRNS, KC_DOT,  KC_PLUS, KC_TRNS,
+       KC_TRNS, KC_F6,   KC_F7,     KC_F8,      KC_F9,      KC_F10,         KC_F11,
+       KC_TRNS, KC_TRNS, KC_KP_7,   KC_KP_8,    KC_KP_9,    KC_KP_SLASH,    KC_F12,
+                KC_TRNS, KC_KP_4,   KC_KP_5,    KC_KP_6,    KC_KP_ASTERISK, KC_KP_EQUAL,
+       KC_TRNS, KC_AMPR, KC_KP_1,   KC_KP_2,    KC_KP_3,    KC_KP_MINUS,    KC_BSLS,
+                         KC_KP_0,   KC_TRNS,    KC_DOT,     KC_KP_PLUS,     KC_TRNS,
        KC_TRNS, KC_TRNS,
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS
