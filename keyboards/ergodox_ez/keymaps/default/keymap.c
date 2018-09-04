@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                          MO(SYMB), MO(ARRW), KC_NO,
         // right hand
              KC_PSCR,     KC_6,   KC_7,    KC_8,   KC_9,   KC_0,             KC_MINS,
-             KC_BSPC,     KC_Y,   KC_U,    KC_I,   KC_O,   KC_P,             JP_LBRC,
+             KC_BSPC,     KC_Y,   KC_U,    KC_I,   KC_O,   KC_P,             JP_AT,
                           KC_H,   KC_J,    KC_K,   KC_L,   KC_SCLN,          JP_COLN,
              KC_DEL,      KC_N,   KC_M,    KC_COMM,KC_DOT, KC_SLSH,          JP_RO,
                                   KC_HENK, JP_HAT ,KC_JYEN,JP_AT,            JP_RBRC,
