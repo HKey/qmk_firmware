@@ -37,19 +37,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * | ZKHK   |   1  |   2  |   3  |   4  |   5  |      |           | PSCR |   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Tab    |   Q  |   W  |   E  |   R  |   T  |      |           | BSPC |   Y  |   U  |   I  |   O  |   P  |   @    |
+ * | Tab    |   Q  |   W  |   E  |   R  |   T  | Del  |           | BSPC |   Y  |   U  |   I  |   O  |   P  |   @    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | LCtrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |   :    |
- * |--------+------+------+------+------+------| Del  |           |  B   |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------| Enter|           |  B   |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  |   \    |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      | LWin |  Alt | MHEN |                                       | ESC  |   ^  |   [  |   ]  | Enter|
+ *   |      |      | LWin |  Alt | MHEN |                                       | ESC  |   ^  |   [  |   ]  |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |  L1  |  L2  |       | VOLD | VOLU |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      |      |       |      |      |      |
- *                                 |Space | ~L1  |------|       |------|      |Space |
+ *                                 |Space | ~L1  |------|       |------| ~L1  |Space |
  *                                 |      |      | ~L2  |       |      |      |      |
  *                                 `--------------------'       `--------------------'
  */
@@ -58,9 +58,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [NMAL] = LAYOUT_ergodox(  // layer 0 : default
         // left hand
         KC_ZKHK,      KC_1,    KC_2,     KC_3,    KC_4,     KC_5,     KC_NO,
-        KC_TAB,       KC_Q,    KC_W,     KC_E,    KC_R,     KC_T,     KC_NO,
+        KC_TAB,       KC_Q,    KC_W,     KC_E,    KC_R,     KC_T,     KC_DEL,
         KC_LCTRL,     KC_A,    KC_S,     KC_D,    KC_F,     KC_G,
-        KC_LSFT,      KC_Z,    KC_X,     KC_C,    KC_V,     KC_B,     KC_DEL,
+        KC_LSFT,      KC_Z,    KC_X,     KC_C,    KC_V,     KC_B,     KC_ENT,
         KC_NO,        KC_NO,   KC_LWIN,  KC_LALT, KC_MHEN,
                                                             TG(SYMB), TG(ARRW),
                                                                       KC_NO,
@@ -70,10 +70,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_BSPC, KC_Y,    KC_U,     KC_I,    KC_O,     KC_P,     JP_AT,
                       KC_H,    KC_J,     KC_K,    KC_L,     KC_SCLN,  JP_COLN,
              KC_B,    KC_N,    KC_M,     KC_COMM, KC_DOT,   KC_SLSH,  JP_RO,
-                               KC_ESC,   JP_HAT , JP_LBRC,  JP_RBRC,  KC_ENT,
+             KC_ESC,  JP_HAT , JP_LBRC,  JP_RBRC,  KC_NO,
              KC_VOLD, KC_VOLU,
              KC_NO,
-             KC_NO,   KC_NO,   KC_SPC
+             KC_NO,   MO(SYMB),KC_SPC
     ),
 /* Keymap 1: Symbol Layer
  *
