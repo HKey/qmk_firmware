@@ -93,11 +93,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 |      |      |      |       |      |      |      |
  *                                 `--------------------'       `--------------------'
  */
-// SYMBOLS
 [SYMB] = LAYOUT_ergodox(
        // left hand
        VRSN,   KC_F1,  KC_F2,  KC_F3,     KC_F4,    KC_F5,  KC_TRNS,
        KC_TRNS,KC_EXLM,KC_AT,  S(KC_MINS),S(JP_HAT),KC_PIPE,KC_TRNS,
+
        KC_TRNS,KC_HASH,KC_DLR, KC_LPRN,   KC_RPRN,  KC_GRV,
        KC_TRNS,KC_PERC,KC_CIRC,KC_MINS,   JP_HAT,   KC_TILD,KC_TRNS,
           EPRM,KC_TRNS,KC_TRNS,KC_TRNS,   KC_TRNS,
@@ -155,10 +155,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,
        KC_TRNS, RESET,   KC_TRNS
 ),
-};
-
-const uint16_t PROGMEM fn_actions[] = {
-    [1] = ACTION_LAYER_TAP_TOGGLE(SYMB)                // FN1 - Momentary Layer 1 (Symbols)
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
